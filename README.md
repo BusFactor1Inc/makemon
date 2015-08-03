@@ -8,7 +8,7 @@ the command if make is successful.
 
 Usage:
 
-   makemon [directory to watch (recursively)] [command ...]
+    makemon [directory to watch (recursively)] [command ...]
 
 Example:
 
