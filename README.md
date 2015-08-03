@@ -10,6 +10,10 @@ Usage:
 
    makemon [directory to watch (recursively)] [command ...]
 
+Example:
+
+    makemon . node server.js
+
 License:
 --------
 
