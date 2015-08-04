@@ -1,5 +1,5 @@
 #!/bin/bash
-
+MAKEOPTS=${MAKEOPTS-DEBUG=1}
 watchdir=${1-.}
 shift;
 cmd="${@}"
@@ -8,7 +8,7 @@ if [[ -z $cmd ]]; then
 fi
 pidfile=$(tempfile -p makemon)
 trap "rm $pidfile" EXIT
-
+echo "Using command: $cmd"
 while true; do
     if make $MAKEOPTS; then
         $cmd &
