@@ -10,7 +10,7 @@ pidfile=$(tempfile -p makemon)
 trap "rm $pidfile" EXIT
 
 while true; do
-    if make; then
+    if make $MAKEOPTS; then
         $cmd &
         echo $! > $pidfile
     fi
